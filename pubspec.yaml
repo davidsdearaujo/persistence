@@ -1,8 +1,9 @@
 name: persistence
 description: A new Flutter package project.
 version: 0.0.1
-author:
-homepage:
+author: David Araujo <deivao@git
+homepage: https://github.com/davidsdearaujo/persistence
+git: https://github.com/davidsdearaujo/persistence
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
