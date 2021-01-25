@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:test/test.dart';
+import 'package:flutter_test/flutter_test.dart';
 import 'package:persistence/src/implementations/volatile_persistence.dart';
 import 'package:persistence/src/persistence_subject_interface.dart';
 import 'package:persistence/src/subjects/volatile_subject.dart';
