@@ -1,7 +1,6 @@
 name: persistence
 description: A new Flutter package project.
 version: 1.0.0-nullsafety
-author: David Araujo - Deivão
 homepage: https://github.com/davidsdearaujo
 git: https://github.com/davidsdearaujo/persistence
 
@@ -10,13 +9,15 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
+  hive: ^1.4.4+1
   hive_flutter: ^0.3.1
+  meta: ^1.2.4
   flutter:
     sdk: flutter
 
 dev_dependencies:
-  meta: ^1.2.4
   mocktail: ^0.0.1-dev.7
-  test: ^1.16.0-nullsafety.16
-  
+  flutter_test:
+    sdk: flutter
+
 flutter:
