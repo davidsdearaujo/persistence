@@ -1,7 +1,8 @@
 library persistence;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'src/persistence_interface.dart';
+export 'src/persistence_subject_interface.dart';
+export 'src/implementations/hive_persistence.dart';
+export 'src/implementations/volatile_persistence.dart';
+export 'src/subjects/persistence_subject.dart';
+export 'src/subjects/volatile_subject.dart';
