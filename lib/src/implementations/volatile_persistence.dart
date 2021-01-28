@@ -13,19 +13,19 @@ class VolatilePersistence extends IPersistence {
   Future<dynamic> get(String key) async => _data[key];
 
   @override
-  Future<bool> getBool(String key) async => _data[key];
+  Future<bool?> getBool(String key) async => _data[key];
 
   @override
-  Future<double> getDouble(String key) async => _data[key];
+  Future<double?> getDouble(String key) async => _data[key];
 
   @override
-  Future<int> getInt(String key) async => _data[key];
+  Future<int?> getInt(String key) async => _data[key];
 
   @override
-  Future<Map> getMap(String key) async => _data[key];
+  Future<Map?> getMap(String key) async => _data[key];
 
   @override
-  Future<String> getString(String key) async => _data[key];
+  Future<String?> getString(String key) async => _data[key];
 
   @override
   Future<void> set(String key, dynamic value) async => _data[key] = value;

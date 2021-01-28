@@ -44,21 +44,21 @@ abstract class HivePersistence extends IPersistence {
 
   @protected
   @override
-  Future<double> getDouble(String key) async {
+  Future<double?> getDouble(String key) async {
     final box = await boxCompleter.future;
     return box.get(key);
   }
 
   @protected
   @override
-  Future<int> getInt(String key) async {
+  Future<int?> getInt(String key) async {
     final box = await boxCompleter.future;
     return box.get(key);
   }
 
   @protected
   @override
-  Future<String> getString(String key) async {
+  Future<String?> getString(String key) async {
     final box = await boxCompleter.future;
     return box.get(key);
   }
@@ -86,7 +86,7 @@ abstract class HivePersistence extends IPersistence {
 
   @protected
   @override
-  Future<Map> getMap(String key) async {
+  Future<Map?> getMap(String key) async {
     final box = await boxCompleter.future;
     return box.get(key);
   }
@@ -100,7 +100,7 @@ abstract class HivePersistence extends IPersistence {
 
   @protected
   @override
-  Future<bool> getBool(String key) async {
+  Future<bool?> getBool(String key) async {
     final box = await boxCompleter.future;
     return box.get(key);
   }

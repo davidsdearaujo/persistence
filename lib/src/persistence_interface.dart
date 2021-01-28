@@ -11,7 +11,7 @@ abstract class IPersistence {
   Future<void> set(String key, dynamic value);
 
   @protected
-  Future<bool?> containsKey(String key);
+  Future<bool> containsKey(String key);
 
   @protected
   Future<String?> getString(String key);

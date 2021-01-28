@@ -1,6 +1,6 @@
 name: persistence
 description: A new Flutter package project.
-version: 1.0.0-nullsafety
+version: 1.0.0-nullsafety.2
 homepage: https://github.com/davidsdearaujo
 git: https://github.com/davidsdearaujo/persistence
 
