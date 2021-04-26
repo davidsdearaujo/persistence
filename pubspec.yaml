@@ -1,20 +1,22 @@
 name: persistence
-description: Package to help in a local persistence.
-version: 1.0.0+1
-homepage: https://github.com/davidsdearaujo/persistence
+description: A new Flutter package project.
+version: 2.0.0
+homepage: https://github.com/davidsdearaujo
 git: https://github.com/davidsdearaujo/persistence
 
 environment:
-  sdk: ">=2.7.0 <2.12.0-0"
+  sdk: ">=2.12.0 <3.0.0"
   flutter: ">=1.17.0"
 
 dependencies:
-  hive: ^1.4.4+1
-  hive_flutter: ^0.3.1
+  hive: ^2.0.0
+  hive_flutter: ^1.0.0
+  meta: ^1.2.4
   flutter:
     sdk: flutter
 
 dev_dependencies:
+  mocktail: ^0.0.1-dev.7
   flutter_test:
     sdk: flutter
 
