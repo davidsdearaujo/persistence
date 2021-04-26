@@ -21,6 +21,7 @@ abstract class IPersistenceSubject<T> extends Stream<T> with Sink<T> {
 
   Future close() => controller.close();
   Future<void> initialize() async {
+    //ignore:invalid_use_of_protected_member
     final map = await persistence.getMap(key);
     if (map != null) {
       final value = fromMap(map);
@@ -32,6 +33,7 @@ abstract class IPersistenceSubject<T> extends Stream<T> with Sink<T> {
   Future<void> add(T data) async {
     controller.add(data);
     final map = toMap(data);
+    //ignore:invalid_use_of_protected_member
     await persistence.setMap(key, map);
   }
 
