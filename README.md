@@ -2,6 +2,15 @@
 
 A new Flutter package project.
 
+Flutter version <2.0: 
+```yaml
+persistence: 1.0.0+1
+```
+
+Flutter version >=2.0: 
+```yaml
+persistence: <lastest>
+```
 ## Getting Started
 
 This project is a starting point for a Dart

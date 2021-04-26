@@ -47,13 +47,13 @@ abstract class Persistence {
   Future<List<Map>> getMapList(String key) async {
     var response = <Map>[];
     final map = await getMap(key);
-    if (map != null) response = (map["values"] as List).cast<Map>();
+    if (map.containsKey("values")) response = (map["values"] as List).cast<Map>();
     return response;
   }
 
   @protected
   Future<void> setMapList(String key, Iterable<Map> values) async {
-    await setMap(key, {"values": values?.toList()});
+    await setMap(key, {"values": values.toList()});
   }
 
   Future<void> clear();
