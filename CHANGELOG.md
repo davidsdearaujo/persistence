@@ -1,6 +1,9 @@
+## 2.0.3 - 2021.04.27
+
+ - Removed **@protect** annotations from IPersistence;
 ## 2.0.2 - 2021.04.27
 
- - Removed @protect annotations from HovePersistence;
+ - Removed **@protect** annotations from HivePersistence;
 
 ## 2.0.1 - 2021.04.27
 

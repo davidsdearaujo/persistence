@@ -1,49 +1,22 @@
 import 'package:meta/meta.dart';
 
 abstract class IPersistence {
-  @protected
   Future<Object?> get(String key);
-
-  @protected
   Future<void> remove(String key);
-
-  @protected
   Future<void> set(String key, Object value);
-
-  @protected
   Future<bool> containsKey(String key);
-
-  @protected
   Future<String?> getString(String key);
-
-  @protected
   Future<void> setString(String key, String value);
-
-  @protected
   Future<int?> getInt(String key);
-
-  @protected
   Future<void> setInt(String key, int value);
-
-  @protected
   Future<double?> getDouble(String key);
-
-  @protected
   Future<void> setDouble(String key, double value);
-
-  @protected
   Future<bool?> getBool(String key);
-
-  @protected
   Future<void> setBool(String key, bool value);
-
-  @protected
   Future<Map?> getMap(String key);
-
-  @protected
   Future<void> setMap(String key, Map value);
+  Future<void> clear();
 
-  @protected
   Future<List<Map>> getMapList(String key) async {
     var response = <Map>[];
     final map = await getMap(key);
@@ -51,10 +24,7 @@ abstract class IPersistence {
     return response;
   }
 
-  @protected
   Future<void> setMapList(String key, Iterable<Map> values) async {
     await setMap(key, {"values": values.toList()});
   }
-
-  Future<void> clear();
 }
