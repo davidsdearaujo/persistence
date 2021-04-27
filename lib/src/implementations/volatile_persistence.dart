@@ -47,7 +47,4 @@ class VolatilePersistence extends IPersistence {
 
   @override
   Future<void> clear() async => _data.clear();
-
-  @override
-  void dispose() => clear();
 }
