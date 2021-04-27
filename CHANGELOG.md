@@ -1,3 +1,7 @@
+## 2.0.2 - 2021.04.27
+
+ - Removed @protect annotations from HovePersistence;
+
 ## 2.0.1 - 2021.04.27
 
  - Transformed abstract class to concrete class;
