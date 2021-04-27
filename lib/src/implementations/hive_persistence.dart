@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:flutter/foundation.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
@@ -9,8 +8,10 @@ import '../persistence_interface.dart';
 class HivePersistence extends IPersistence {
   final boxCompleter = Completer<Box>();
 
-  HivePersistence(String boxName) {
-    Hive.initFlutter().whenComplete(() => boxCompleter.complete(Hive.openBox(boxName)));
+  Future<void> configure(String boxName) async {
+    await Hive.initFlutter()
+        .then((_) => boxCompleter.complete(Hive.openBox(boxName)))
+        .catchError((exception, stacktrace) => boxCompleter.completeError(exception, stacktrace));
   }
 
   @override

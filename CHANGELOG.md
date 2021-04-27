@@ -1,6 +1,11 @@
+## 2.0.4 - 2021.04.27
+
+ - Moved hive configuration from constructor to `Future<void> configure()` function in **HivePersistence**;
+ 
 ## 2.0.3 - 2021.04.27
 
  - Removed **@protect** annotations from IPersistence;
+
 ## 2.0.2 - 2021.04.27
 
  - Removed **@protect** annotations from HivePersistence;
