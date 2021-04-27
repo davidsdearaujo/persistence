@@ -6,11 +6,10 @@ import 'package:hive_flutter/hive_flutter.dart';
 
 import '../persistence_interface.dart';
 
-abstract class HivePersistence extends IPersistence {
+class HivePersistence extends IPersistence {
   final boxCompleter = Completer<Box>();
 
-  final bool clearOnDispose;
-  HivePersistence(String boxName, [this.clearOnDispose = false]) {
+  HivePersistence(String boxName) {
     Hive.initFlutter().whenComplete(() => boxCompleter.complete(Hive.openBox(boxName)));
   }
 
@@ -30,7 +29,7 @@ abstract class HivePersistence extends IPersistence {
 
   @protected
   @override
-  Future<dynamic> get(String key) async {
+  Future<Object?> get(String key) async {
     final box = await boxCompleter.future;
     return box.get(key);
   }
@@ -116,10 +115,5 @@ abstract class HivePersistence extends IPersistence {
   Future<void> clear() async {
     final box = await boxCompleter.future;
     await box.clear();
-  }
-
-  @override
-  void dispose() async {
-    if (clearOnDispose) await clear();
   }
 }

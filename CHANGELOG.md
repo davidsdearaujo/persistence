@@ -1,3 +1,8 @@
+## 2.0.1 - 2021.04.27
+
+ - Transformed abstract class to concrete class;
+ - Removed not used classes;
+
 ## 2.0.0 - 2021.04.26
 
  - Included behavior subject and yours dependencies to local directory;

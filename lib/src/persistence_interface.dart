@@ -2,13 +2,13 @@ import 'package:meta/meta.dart';
 
 abstract class IPersistence {
   @protected
-  Future<dynamic> get(String key);
+  Future<Object?> get(String key);
 
   @protected
   Future<void> remove(String key);
 
   @protected
-  Future<void> set(String key, dynamic value);
+  Future<void> set(String key, Object value);
 
   @protected
   Future<bool> containsKey(String key);
@@ -57,6 +57,4 @@ abstract class IPersistence {
   }
 
   Future<void> clear();
-
-  void dispose();
 }
